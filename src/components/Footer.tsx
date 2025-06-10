@@ -66,7 +66,7 @@ const Footer = () => {
             {/* Product Links */}
             <div>
               <h4 className="text-lg font-semibold mb-6">Product</h4>
-              <ul className="space-y-3">
+              <ul className="flex flex-wrap space-x-6">
                 {footerLinks.product.map((link, index) => (
                   <li key={index}>
                     <button
