@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import Overview from './dashboard/Overview';
 import Recommendations from './dashboard/Recommendations';
-//import Analytics from './dashboard/Analytics';
+import Analytics from './dashboard/Analytics';
 import StoreComparison from './dashboard/StoreComparison';
 import SettingsFeedback from './dashboard/SettingsFeedback';
 
