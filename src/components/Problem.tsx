@@ -99,11 +99,7 @@ const Problem = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10"></div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-red-400/20 to-transparent rounded-full blur-3xl"></div>
           
-          <div className="relative">
-            <h3 className="text-2xl font-bold mb-6 text-center">Why Traditional Solutions Fall Short</h3>
-            
 
-          </div>
         </div>
       </div>
     </section>
