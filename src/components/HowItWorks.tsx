@@ -46,7 +46,71 @@ const HowItWorks = () => {
       color: "from-red-500 to-red-600"
     }
   ];
+  return (
+    <section id="how-it-works" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            How <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Smart StockFlow AI</span> Works
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Our intelligent system follows a comprehensive six-step process that transforms raw data 
+            into actionable insights, driving continuous optimization of your inventory management.
+          </p>
+        </div>
 
+        {/* Process Flow */}
+        <div className="relative">
+          {/* Connection Lines - Desktop */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-purple-200 to-blue-200 transform -translate-y-1/2"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            {steps.map((step, index) => {
+              const IconComponent = step.icon;
+              return (
+                <div key={index} className="relative">
+                  {/* Step Card */}
+                  <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative z-10">
+                    {/* Step Number */}
+                    <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                      {index + 1}
+                    </div>
+
+                    {/* Icon */}
+                    <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center mb-6`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{step.description}</p>
+
+                    {/* Details */}
+                    <div className="space-y-2">
+                      {step.details.map((detail, detailIndex) => (
+                        <div key={detailIndex} className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                          <span className="text-sm text-gray-500">{detail}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Mobile Connection Line */}
+                  {index < steps.length - 1 && (
+                    <div className="lg:hidden flex justify-center my-8">
+                      <div className="w-0.5 h-8 bg-gradient-to-b from-blue-400 to-purple-400"></div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 
 };
 
