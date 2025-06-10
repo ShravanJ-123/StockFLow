@@ -16,67 +16,75 @@ const Features = () => {
       icon: Brain,
       title: "Intelligent Recommendation Engine",
       description: "Advanced ML algorithms analyze patterns and predict optimal strategies for slow-moving inventory, providing personalized recommendations for each product category.",
-      color: "from-blue-500 to-blue-600",
-      bgColor: "bg-blue-50"
+      color: "from-blue-600 to-blue-700",
+      bgColor: "bg-gradient-to-br from-blue-50 to-blue-100",
+      borderColor: "border-blue-200"
     },
     {
       icon: BarChart3,
       title: "Real-time Dashboards & Visualizations",
       description: "Interactive dashboards provide instant visibility into inventory performance, trends, and actionable insights with customizable views for different stakeholders.",
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50"
+      color: "from-emerald-600 to-emerald-700",
+      bgColor: "bg-gradient-to-br from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       icon: Package,
       title: "Product Bundling Suggestions",
       description: "AI-powered bundling recommendations combine slow-moving items with popular products to increase sales velocity and customer value.",
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50"
+      color: "from-purple-600 to-purple-700",
+      bgColor: "bg-gradient-to-br from-purple-50 to-purple-100",
+      borderColor: "border-purple-200"
     },
     {
       icon: Zap,
       title: "Flash Sales Insights",
       description: "Predictive analytics determine optimal timing, pricing, and promotion strategies for flash sales to maximize inventory turnover and revenue.",
-      color: "from-yellow-500 to-orange-500",
-      bgColor: "bg-yellow-50"
+      color: "from-amber-600 to-orange-600",
+      bgColor: "bg-gradient-to-br from-amber-50 to-orange-100",
+      borderColor: "border-amber-200"
     },
     {
       icon: MapPin,
       title: "Stock Relocation Suggestions",
       description: "Intelligent geographic analysis recommends optimal inventory redistribution across stores to match local demand patterns and preferences.",
-      color: "from-red-500 to-red-600",
-      bgColor: "bg-red-50"
+      color: "from-rose-600 to-rose-700",
+      bgColor: "bg-gradient-to-br from-rose-50 to-rose-100",
+      borderColor: "border-rose-200"
     },
     {
       icon: Calendar,
       title: "Seasonal Demand Analysis",
       description: "Historical and predictive seasonal trend analysis helps anticipate demand fluctuations and prevent inventory accumulation during low-demand periods.",
-      color: "from-indigo-500 to-indigo-600",
-      bgColor: "bg-indigo-50"
+      color: "from-indigo-600 to-indigo-700",
+      bgColor: "bg-gradient-to-br from-indigo-50 to-indigo-100",
+      borderColor: "border-indigo-200"
     },
     {
       icon: RefreshCw,
       title: "Feedback Loop & Continuous Learning",
       description: "System continuously learns from implemented strategies and outcomes, improving recommendation accuracy and adapting to changing market conditions.",
-      color: "from-teal-500 to-teal-600",
-      bgColor: "bg-teal-50"
+      color: "from-teal-600 to-teal-700",
+      bgColor: "bg-gradient-to-br from-teal-50 to-teal-100",
+      borderColor: "border-teal-200"
     },
     {
       icon: TrendingUp,
       title: "Performance Tracking & ROI Analysis",
       description: "Comprehensive tracking of implemented strategies with detailed ROI analysis and performance metrics to measure success and optimize future decisions.",
-      color: "from-pink-500 to-pink-600",
-      bgColor: "bg-pink-50"
+      color: "from-pink-600 to-pink-700",
+      bgColor: "bg-gradient-to-br from-pink-50 to-pink-100",
+      borderColor: "border-pink-200"
     }
   ];
 
   return (
-    <section id="features" className="py-20 bg-gray-50">
+    <section id="features" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Features</span> That Drive Results
+            Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">Features</span> That Drive Results
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our comprehensive suite of AI-powered features transforms inventory management from 
@@ -91,24 +99,27 @@ const Features = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+                className={`${feature.bgColor} ${feature.borderColor} border-2 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 group relative overflow-hidden`}
               >
-                <div className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className={`w-8 h-8 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`} />
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <div className={`relative w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <IconComponent className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-200">
+                <h3 className="relative text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors duration-200">
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed text-sm">
+                <p className="relative text-gray-600 leading-relaxed text-sm">
                   {feature.description}
                 </p>
 
                 {/* Feature Enhancement Indicator */}
-                <div className="mt-4 flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-xs text-green-600 font-medium">Active Feature</span>
+                <div className="relative mt-4 flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                  <span className="text-xs text-emerald-700 font-medium">Active Feature</span>
                 </div>
               </div>
             );
@@ -116,8 +127,13 @@ const Features = () => {
         </div>
 
         {/* Feature Highlight Section */}
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 lg:p-12 text-white">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="mt-20 bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-blue-400/20 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-purple-400/20 to-transparent rounded-full blur-3xl"></div>
+          
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl lg:text-3xl font-bold mb-6">
                 Experience the Power of Integrated Intelligence
@@ -128,11 +144,11 @@ const Features = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-6">
-                <div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                   <h4 className="text-lg font-semibold mb-2">Smart Integration</h4>
                   <p className="text-blue-200 text-sm">Features complement each other for maximum impact</p>
                 </div>
-                <div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                   <h4 className="text-lg font-semibold mb-2">Scalable Solution</h4>
                   <p className="text-blue-200 text-sm">Grows with your business needs and complexity</p>
                 </div>
@@ -140,24 +156,44 @@ const Features = () => {
             </div>
 
             <div className="relative">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                 <h4 className="text-lg font-semibold mb-4">System Performance</h4>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-blue-100">Processing Speed</span>
-                    <span className="text-sm font-medium">99.9% Real-time</span>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-24 h-2 bg-white/20 rounded-full">
+                        <div className="w-full h-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full"></div>
+                      </div>
+                      <span className="text-sm font-medium">99.9% Real-time</span>
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-blue-100">Accuracy Rate</span>
-                    <span className="text-sm font-medium">94.7% Prediction</span>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-24 h-2 bg-white/20 rounded-full">
+                        <div className="w-5/6 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+                      </div>
+                      <span className="text-sm font-medium">94.7% Prediction</span>
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-blue-100">Cost Savings</span>
-                    <span className="text-sm font-medium">Up to 85%</span>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-24 h-2 bg-white/20 rounded-full">
+                        <div className="w-5/6 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                      </div>
+                      <span className="text-sm font-medium">Up to 85%</span>
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-blue-100">ROI Timeline</span>
-                    <span className="text-sm font-medium">3-6 Months</span>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-24 h-2 bg-white/20 rounded-full">
+                        <div className="w-1/2 h-2 bg-gradient-to-r from-pink-400 to-rose-500 rounded-full"></div>
+                      </div>
+                      <span className="text-sm font-medium">3-6 Months</span>
+                    </div>
                   </div>
                 </div>
               </div>

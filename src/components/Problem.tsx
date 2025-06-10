@@ -7,34 +7,38 @@ const Problem = () => {
       icon: TrendingDown,
       title: "Inventory Waste",
       description: "Slow-moving products tie up capital and storage space, leading to significant financial losses through markdowns and disposal costs.",
-      impact: "25-40% of inventory becomes slow-moving"
+      impact: "25-40% of inventory becomes slow-moving",
+      color: "from-red-600 to-red-700"
     },
     {
       icon: DollarSign,
       title: "Profit Erosion",
       description: "Traditional reactive approaches result in deep discounts, clearance sales, and write-offs that directly impact bottom-line profitability.",
-      impact: "$2.1 trillion global inventory waste"
+      impact: "$2.1 trillion global inventory waste",
+      color: "from-orange-600 to-orange-700"
     },
     {
       icon: Clock,
       title: "Decision Delays",
       description: "Manual analysis and delayed insights prevent timely interventions, allowing problems to compound before corrective action can be taken.",
-      impact: "Weeks or months to identify issues"
+      impact: "Weeks or months to identify issues",
+      color: "from-amber-600 to-amber-700"
     },
     {
       icon: AlertTriangle,
       title: "Limited Visibility",
       description: "Lack of predictive analytics means retailers are always reacting to problems rather than preventing them proactively.",
-      impact: "70% of decisions are reactive"
+      impact: "70% of decisions are reactive",
+      color: "from-rose-600 to-rose-700"
     }
   ];
 
   return (
-    <section id="problem" className="py-20 bg-gray-50">
+    <section id="problem" className="py-20 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            The Challenge of <span className="text-red-600">Slow-Moving Inventory</span>
+            The Challenge of <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-orange-600 to-amber-600">Slow-Moving Inventory</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Retail giants like Walmart face a critical challenge: managing billions of dollars in slow-moving 
@@ -49,14 +53,17 @@ const Problem = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                className="bg-white border-2 border-red-200 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 group relative overflow-hidden"
               >
-                <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
-                  <IconComponent className="w-8 h-8 text-red-600" />
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-orange-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <div className={`relative w-16 h-16 bg-gradient-to-r ${problem.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <IconComponent className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{problem.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{problem.description}</p>
-                <div className="bg-red-50 rounded-lg p-3">
+                <h3 className="relative text-xl font-semibold text-gray-900 mb-3 group-hover:text-red-700 transition-colors duration-200">{problem.title}</h3>
+                <p className="relative text-gray-600 mb-4 leading-relaxed">{problem.description}</p>
+                <div className="relative bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-lg p-3">
                   <span className="text-sm font-medium text-red-700">{problem.impact}</span>
                 </div>
               </div>
@@ -65,47 +72,53 @@ const Problem = () => {
         </div>
 
         {/* Impact Statistics */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
+        <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 shadow-xl">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             The Real Cost of Inefficient Inventory Management
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">30-40%</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">30-40%</div>
               <div className="text-gray-600">of retail inventory becomes obsolete or slow-moving annually</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">$1.1T</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">$1.1T</div>
               <div className="text-gray-600">in global retail inventory waste each year</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">15-25%</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold bg-gradient-to-r from-amber-600 to-red-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">15-25%</div>
               <div className="text-gray-600">profit margin loss due to inefficient inventory practices</div>
             </div>
           </div>
         </div>
 
         {/* Why Traditional Solutions Fail */}
-        <div className="mt-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
-          <h3 className="text-2xl font-bold mb-6 text-center">Why Traditional Solutions Fall Short</h3>
+        <div className="mt-16 bg-gradient-to-r from-slate-900 via-gray-900 to-red-900 rounded-2xl p-8 text-white relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-red-400/20 to-transparent rounded-full blur-3xl"></div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold mb-3 text-blue-300">Reactive Approach</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Identifies problems only after they occur</li>
-                <li>• Relies on historical data and gut instincts</li>
-                <li>• Limited ability to predict future trends</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-3 text-blue-300">Manual Processes</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Time-consuming analysis and reporting</li>
-                <li>• Human error in decision-making</li>
-                <li>• Inconsistent implementation across locations</li>
-              </ul>
+          <div className="relative">
+            <h3 className="text-2xl font-bold mb-6 text-center">Why Traditional Solutions Fall Short</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <h4 className="text-lg font-semibold mb-3 text-red-300">Reactive Approach</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Identifies problems only after they occur</li>
+                  <li>• Relies on historical data and gut instincts</li>
+                  <li>• Limited ability to predict future trends</li>
+                </ul>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <h4 className="text-lg font-semibold mb-3 text-orange-300">Manual Processes</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Time-consuming analysis and reporting</li>
+                  <li>• Human error in decision-making</li>
+                  <li>• Inconsistent implementation across locations</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
