@@ -6,8 +6,6 @@ import Solution from './components/Solution';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Technologies from './components/Technologies';
-import Team from './components/Team';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
 
@@ -35,8 +33,6 @@ function App() {
       <Features />
       <HowItWorks />
       <Technologies />
-      <Team />
-      <Contact />
       <Footer />
     </div>
   );
