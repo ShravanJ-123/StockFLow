@@ -102,24 +102,7 @@ const Problem = () => {
           <div className="relative">
             <h3 className="text-2xl font-bold mb-6 text-center">Why Traditional Solutions Fall Short</h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h4 className="text-lg font-semibold mb-3 text-red-300">Reactive Approach</h4>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Identifies problems only after they occur</li>
-                  <li>• Relies on historical data and gut instincts</li>
-                  <li>• Limited ability to predict future trends</li>
-                </ul>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h4 className="text-lg font-semibold mb-3 text-orange-300">Manual Processes</h4>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Time-consuming analysis and reporting</li>
-                  <li>• Human error in decision-making</li>
-                  <li>• Inconsistent implementation across locations</li>
-                </ul>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
