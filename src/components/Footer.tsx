@@ -8,24 +8,6 @@ const Footer = () => {
       { name: 'How It Works', href: '#how-it-works' },
       { name: 'Technologies', href: '#technologies' },
       { name: 'Pricing', href: '#contact' }
-    ],
-    company: [
-      { name: 'About Us', href: '#team' },
-      { name: 'Our Story', href: '#team' },
-      { name: 'Careers', href: '#contact' },
-      { name: 'News', href: '#contact' }
-    ],
-    resources: [
-      { name: 'Documentation', href: '#contact' },
-      { name: 'Support', href: '#contact' },
-      { name: 'Case Studies', href: '#contact' },
-      { name: 'API Reference', href: '#contact' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '#contact' },
-      { name: 'Terms of Service', href: '#contact' },
-      { name: 'Cookie Policy', href: '#contact' },
-      { name: 'GDPR Compliance', href: '#contact' }
     ]
   };
 
@@ -68,15 +50,15 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-blue-400" />
-                  <span className="text-gray-400">hello@smartstockflow.ai</span>
+                  <span className="text-gray-400">shravanjare@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-blue-400" />
-                  <span className="text-gray-400">+1 (555) 123-4567</span>
+                  <span className="text-gray-400">+918624916245</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-blue-400" />
-                  <span className="text-gray-400">San Francisco, CA</span>
+                  <span className="text-gray-400">Pune,India</span>
                 </div>
               </div>
             </div>
@@ -98,81 +80,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Company Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Company</h4>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link, index) => (
-                  <li key={index}>
-                    <button
-                      onClick={() => scrollToSection(link.href)}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
-                    >
-                      {link.name}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Resources Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Resources</h4>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link, index) => (
-                  <li key={index}>
-                    <button
-                      onClick={() => scrollToSection(link.href)}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
-                    >
-                      {link.name}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Legal Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Legal</h4>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link, index) => (
-                  <li key={index}>
-                    <button
-                      onClick={() => scrollToSection(link.href)}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
-                    >
-                      {link.name}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="py-8 border-t border-gray-800">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
-              <p className="text-gray-400">
-                Get the latest updates on Smart StockFlow AI features, industry insights, and best practices.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
-              />
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Footer */}
         <div className="py-8 border-t border-gray-800">
