@@ -79,7 +79,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-
+          </div>
 
         {/* Bottom Footer */}
         <div className="py-8 border-t border-gray-800">
