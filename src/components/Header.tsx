@@ -24,7 +24,6 @@ const Header: React.FC<HeaderProps> = ({ onGetStarted }) => {
     { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Technologies', href: '#technologies' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -108,7 +107,7 @@ const Header: React.FC<HeaderProps> = ({ onGetStarted }) => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200 w-full text-left font-medium"
+                  className="block px-3 py-2 text-white hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200 w-full text-left font-medium"
                 >
                   {item.name}
                 </button>
