@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-blue-400" />
-                  <span className="text-gray-400">Pune,India</span>
+                  <span className="text-gray-400">Pune, India</span>
                 </div>
               </div>
             </div>
@@ -79,7 +79,8 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </div> {/* Close grid */}
+        </div> {/* ✅ Close py-16 */}
 
         {/* Bottom Footer */}
         <div className="py-8 border-t border-gray-800">
