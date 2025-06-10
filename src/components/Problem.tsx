@@ -92,15 +92,6 @@ const Problem = () => {
             </div>
           </div>
         </div>
-
-        {/* Why Traditional Solutions Fail */}
-        <div className="mt-16 bg-gradient-to-r from-slate-900 via-gray-900 to-red-900 rounded-2xl p-8 text-white relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10"></div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-red-400/20 to-transparent rounded-full blur-3xl"></div>
-          
-
-        </div>
       </div>
     </section>
   );
