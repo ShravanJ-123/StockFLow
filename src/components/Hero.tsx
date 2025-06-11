@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
           <div className="text-center lg:text-left">
 
 
-            <h1 className="pt-16 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="pt-12 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Transform Your{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
                 Inventory Management
@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
             </h1>
             
             <p className="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Smart StockFlow AI transforms how Walmart manages slow-moving products by providing 
+              StockFlow AI transforms how Walmart manages slow-moving products by providing 
               intelligent recommendations, predictive analytics, and automated optimization strategies 
               that reduce waste and maximize profitability.
             </p>
