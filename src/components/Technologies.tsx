@@ -150,6 +150,7 @@ const Technologies = () => {
         </div>
 
         {/* Technology Categories */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
           {techCategories.map((category, index) => {
             const IconComponent = category.icon;
@@ -158,10 +159,10 @@ const Technologies = () => {
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
               >
-                <div className={w-16 h-16 ${category.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300}>
-                  <IconComponent className={w-8 h-8 bg-gradient-to-r ${category.color} bg-clip-text text-transparent} />
-                </div>
-                
+                <div className={`w-16 h-16 ${category.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+  <IconComponent className={`w-8 h-8 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />
+</div>
+
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">{category.title}</h3>
                 
                 <div className="space-y-2">
