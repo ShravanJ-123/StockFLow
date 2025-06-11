@@ -127,22 +127,6 @@ const Solution = () => {
             </div>
           </div>
         </div>
-
-        {/* Key Technologies Used */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Key Technologies Powering Our Solution</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
-              <div
-                key={index}
-                className="bg-white border-2 border-gray-200 rounded-xl p-4 text-center hover:bg-gradient-to-br hover:from-blue-50 hover:to-purple-50 hover:border-blue-300 hover:text-blue-700 transition-all duration-300 cursor-pointer transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
-              >
-                <span className="font-medium">{tech}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Achievable Benefits */}
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-12 text-center">Achievable Benefits</h3>
