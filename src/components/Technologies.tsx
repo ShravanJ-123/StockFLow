@@ -19,13 +19,11 @@ const Technologies = () => {
       icon: Brain,
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
-      technologies: [
-        "TensorFlow & PyTorch for deep learning models",
-        "Scikit-learn for traditional ML algorithms", 
-        "Neural Networks for pattern recognition",
-        "Natural Language Processing for feedback analysis",
-        "Computer Vision for inventory monitoring",
-        "Reinforcement Learning for strategy optimization"
+      points: [
+        "Deep learning: TensorFlow, PyTorch",
+        "Traditional ML: Scikit-learn",
+        "Computer Vision & NLP",
+        "Reinforcement learning models",
       ]
     },
     {
@@ -33,13 +31,10 @@ const Technologies = () => {
       icon: Cloud,
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
-      technologies: [
-        "AWS/Azure/GCP for scalable computing",
-        "Kubernetes for container orchestration",
-        "Docker for application containerization",
-        "Serverless functions for event processing",
-        "Auto-scaling for demand management",
-        "Multi-region deployment for availability"
+      points: [
+        "Multi-cloud: AWS, GCP, Azure",
+        "Docker & Kubernetes",
+        "Serverless & auto-scaling",
       ]
     },
     {
@@ -47,13 +42,10 @@ const Technologies = () => {
       icon: Database,
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
-      technologies: [
-        "Apache Kafka for real-time streaming",
-        "Apache Spark for big data processing",
-        "PostgreSQL/MongoDB for data storage",
-        "Redis for caching and session management",
-        "ETL pipelines for data transformation",
-        "Data lakes for historical analytics"
+      points: [
+        "Kafka & Spark for streaming",
+        "SQL/NoSQL: PostgreSQL, MongoDB",
+        "ETL pipelines & Data Lakes",
       ]
     },
     {
@@ -61,13 +53,10 @@ const Technologies = () => {
       icon: BarChart3,
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
-      technologies: [
-        "Tableau/Power BI for business intelligence",
-        "D3.js for custom visualizations",
-        "Plotly for interactive charts",
-        "Grafana for operational dashboards",
-        "Apache Superset for data exploration",
-        "Custom React dashboards"
+      points: [
+        "BI tools: Power BI, Tableau",
+        "Interactive charts: Plotly, D3.js",
+        "Dashboards: Grafana, Superset",
       ]
     },
     {
@@ -75,13 +64,10 @@ const Technologies = () => {
       icon: Zap,
       color: "from-yellow-500 to-yellow-600",
       bgColor: "bg-yellow-50",
-      technologies: [
-        "Apache Kafka Streams for stream processing",
-        "AWS Lambda for serverless computing",
-        "WebSockets for real-time updates",
-        "Event-driven architecture",
-        "Message queues for async processing",
-        "CDC (Change Data Capture) systems"
+      points: [
+        "WebSockets & Kafka Streams",
+        "AWS Lambda & Event Architecture",
+        "CDC & Message Queues",
       ]
     },
     {
@@ -89,13 +75,10 @@ const Technologies = () => {
       icon: Shield,
       color: "from-red-500 to-red-600",
       bgColor: "bg-red-50",
-      technologies: [
-        "OAuth 2.0 & JWT for authentication",
-        "End-to-end encryption for data protection",
-        "Role-based access control (RBAC)",
-        "GDPR/CCPA compliance frameworks",
-        "API security and rate limiting",
-        "Audit logging and monitoring"
+      points: [
+        "OAuth2, JWT, RBAC",
+        "Encryption & Logging",
+        "Compliance: GDPR, CCPA",
       ]
     },
     {
@@ -103,13 +86,10 @@ const Technologies = () => {
       icon: Server,
       color: "from-indigo-500 to-indigo-600",
       bgColor: "bg-indigo-50",
-      technologies: [
-        "Python with Django/Flask frameworks",
-        "Node.js for JavaScript backend",
-        "RESTful APIs and GraphQL",
-        "Microservices architecture",
-        "API Gateway for service orchestration",
-        "Background job processing"
+      points: [
+        "Django, Flask, Node.js",
+        "REST & GraphQL APIs",
+        "Microservices & Background Jobs",
       ]
     },
     {
@@ -117,13 +97,10 @@ const Technologies = () => {
       icon: Code,
       color: "from-pink-500 to-pink-600",
       bgColor: "bg-pink-50",
-      technologies: [
-        "React.js with TypeScript",
-        "Next.js for SSR and performance",
-        "Tailwind CSS for responsive design",
-        "Progressive Web App (PWA) features",
-        "State management with Redux/Zustand",
-        "Component libraries and design systems"
+      points: [
+        "React, Next.js, TypeScript",
+        "Tailwind & Responsive UI",
+        "State Mgmt: Redux, Zustand",
       ]
     }
   ];
