@@ -181,3 +181,5 @@ const Technologies = () => {
     </section>
   );
 };
+
+export default Technologies;
