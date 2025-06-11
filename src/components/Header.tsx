@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ onGetStarted }) => {
             </div>
             <div>
               <span className="text-xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
-                Smart StockFlow AI
+                StockFlow AI
               </span>
               <div className="flex items-center space-x-1">
                 <Sparkles className="w-3 h-3 text-blue-500" />
