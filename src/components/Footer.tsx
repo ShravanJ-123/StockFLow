@@ -43,8 +43,6 @@ const Footer = () => {
 
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Transforming retail inventory management with intelligent insights. 
-                Our AI-powered solution helps retailers optimize slow-moving products 
-                and maximize profitability.
               </p>
 
               <div className="space-y-3">
