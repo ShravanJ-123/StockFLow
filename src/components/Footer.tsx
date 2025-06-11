@@ -38,7 +38,7 @@ const Footer = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                   <ShoppingCart className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">Smart StockFlow AI</span>
+                <span className="text-xl font-bold">StockFlow AI</span>
               </div>
 
               <p className="text-gray-400 mb-6 leading-relaxed">
@@ -100,20 +100,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="py-6 border-t border-gray-800 text-center text-sm text-gray-400">
-          <p>
-            © {new Date().getFullYear()} Smart StockFlow AI. All rights reserved.
-            <br className="block md:hidden" />
-            <span className="ml-2">Developed for Walmart Sparkathon Hackathon.</span>
-          </p>
-        </div>
-
         {/* Hackathon Badge */}
         <div className="py-4 border-t border-gray-800">
           <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-600/20 rounded-lg p-4 text-center">
             <p className="text-sm text-blue-300">
-              🏆 <strong>Walmart Sparkathon 2024</strong> - Innovation in Retail Technology
+              🏆 <strong>Walmart Sparkathon 2025</strong> - Innovation in Retail Technology
             </p>
           </div>
         </div>
