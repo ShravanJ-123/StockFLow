@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
           <div className="text-center lg:text-left">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="pt-32 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Transform Your{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
                 Inventory Management
