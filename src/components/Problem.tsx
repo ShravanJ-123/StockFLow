@@ -70,29 +70,6 @@ const Problem = () => {
             );
           })}
         </div>
-
-        {/* Impact Statistics */}
-        <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 shadow-xl">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            The Real Cost of Inefficient Inventory Management
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center group">
-              <div className="text-4xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">30-40%</div>
-              <div className="text-gray-600">of retail inventory becomes obsolete or slow-moving annually</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">$1.1T</div>
-              <div className="text-gray-600">in global retail inventory waste each year</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-4xl font-bold bg-gradient-to-r from-amber-600 to-red-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">15-25%</div>
-              <div className="text-gray-600">profit margin loss due to inefficient inventory practices</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
