@@ -1,10 +1,18 @@
 import React from 'react';
 
-const Analytics: React.FC = () => {
+interface AnalyticsProps {
+  isDarkMode: boolean;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ isDarkMode }) => {
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-lg shadow-sm border p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Analytics Overview</h2>
+      <div className={`rounded-lg shadow-sm border p-6 ${
+        isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white'
+      }`}>
+        <h2 className={`text-xl font-semibold mb-4 ${
+          isDarkMode ? 'text-white' : 'text-gray-900'
+        }`}>Analytics Overview</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="text-sm font-medium text-blue-800">Total Stores Monitored</h3>
@@ -21,10 +29,18 @@ const Analytics: React.FC = () => {
         </div>
       </div>
       
-      <div className="bg-white rounded-lg shadow-sm border p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Price Trends</h3>
-        <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
-          <p className="text-gray-500">Price trend chart would be displayed here</p>
+      <div className={`rounded-lg shadow-sm border p-6 ${
+        isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white'
+      }`}>
+        <h3 className={`text-lg font-semibold mb-4 ${
+          isDarkMode ? 'text-white' : 'text-gray-900'
+        }`}>Price Trends</h3>
+        <div className={`h-64 rounded-lg flex items-center justify-center ${
+          isDarkMode ? 'bg-gray-700' : 'bg-gray-50'
+        }`}>
+          <p className={isDarkMode ? 'text-gray-400' : 'text-gray-500'}>
+            Price trend chart would be displayed here
+          </p>
         </div>
       </div>
     </div>
