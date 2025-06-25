@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Recommendations: React.FC = () => {
+interface RecommendationsProps {
+  isDarkMode: boolean;
+}
+
+const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
   const recommendations = [
     {
       id: 1,
@@ -33,25 +37,43 @@ const Recommendations: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-lg shadow-sm border p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Smart Recommendations</h2>
-        <p className="text-gray-600 mb-6">Based on your shopping patterns and current market trends</p>
+      <div className={`rounded-lg shadow-sm border p-6 ${
+        isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
+      }`}>
+        <h2 className={`text-xl font-semibold mb-4 ${
+          isDarkMode ? 'text-white' : 'text-gray-900'
+        }`}>Smart Recommendations</h2>
+        <p className={`mb-6 ${
+          isDarkMode ? 'text-gray-300' : 'text-gray-600'
+        }`}>Based on your shopping patterns and current market trends</p>
         
         <div className="space-y-4">
           {recommendations.map((item) => (
-            <div key={item.id} className="border rounded-lg p-4 hover:bg-gray-50 transition-colors">
+            <div key={item.id} className={`border rounded-lg p-4 transition-colors ${
+              isDarkMode 
+                ? 'border-gray-600 hover:bg-gray-700' 
+                : 'border-gray-200 hover:bg-gray-50'
+            }`}>
               <div className="flex justify-between items-start">
                 <div className="flex-1">
-                  <h3 className="font-medium text-gray-900">{item.product}</h3>
-                  <p className="text-sm text-gray-600 mt-1">Available at {item.store}</p>
+                  <h3 className={`font-medium ${
+                    isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}>{item.product}</h3>
+                  <p className={`text-sm mt-1 ${
+                    isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                  }`}>Available at {item.store}</p>
                   <div className="flex items-center mt-2 space-x-4">
-                    <span className="text-sm text-gray-500">Current: {item.currentPrice}</span>
+                    <span className={`text-sm ${
+                      isDarkMode ? 'text-gray-400' : 'text-gray-500'
+                    }`}>Current: {item.currentPrice}</span>
                     <span className="text-sm text-green-600 font-medium">Target: {item.recommendedPrice}</span>
                   </div>
                 </div>
                 <div className="text-right">
                   <div className="text-lg font-semibold text-green-600">{item.savings}</div>
-                  <div className="text-xs text-gray-500">potential savings</div>
+                  <div className={`text-xs ${
+                    isDarkMode ? 'text-gray-400' : 'text-gray-500'
+                  }`}>potential savings</div>
                   <div className={`text-xs mt-1 px-2 py-1 rounded-full ${
                     item.confidence === 'High' 
                       ? 'bg-green-100 text-green-800' 
@@ -66,9 +88,15 @@ const Recommendations: React.FC = () => {
         </div>
       </div>
       
-      <div className="bg-blue-50 rounded-lg p-6">
-        <h3 className="text-lg font-semibold text-blue-900 mb-2">Pro Tip</h3>
-        <p className="text-blue-800">
+      <div className={`rounded-lg p-6 ${
+        isDarkMode ? 'bg-blue-900/20 border border-blue-800' : 'bg-blue-50'
+      }`}>
+        <h3 className={`text-lg font-semibold mb-2 ${
+          isDarkMode ? 'text-blue-300' : 'text-blue-900'
+        }`}>Pro Tip</h3>
+        <p className={`${
+          isDarkMode ? 'text-blue-200' : 'text-blue-800'
+        }`}>
           Set up price alerts for items you're watching to get notified when they drop to your target price.
         </p>
       </div>
