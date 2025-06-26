@@ -24,7 +24,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
   const [selectedUrgency, setSelectedUrgency] = useState('All');
   const [selectedStore, setSelectedStore] = useState('All Stores');
   
-  const [products, setProducts] = useState<Product[]>([
+  const [products, setProducts] = useState([
     {
       id: '1',
       name: 'Samsung 55" Smart TV',
@@ -32,7 +32,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
       currentInventory: 45,
       predictedSales: 12,
       recommendedAction: 'Bundle with Sound Bar',
-      urgency: 'High',
+      urgency: 'High' as const,
       managerAction: '',
       feedback: '',
       potentialSavings: '$15,000',
@@ -45,7 +45,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
       currentInventory: 78,
       predictedSales: 8,
       recommendedAction: 'Flash Sale - 40% Off',
-      urgency: 'High',
+      urgency: 'High' as const,
       managerAction: '',
       feedback: '',
       potentialSavings: '$8,500',
@@ -58,7 +58,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
       currentInventory: 156,
       predictedSales: 45,
       recommendedAction: 'Bundle with Sauce & Cheese',
-      urgency: 'Medium',
+      urgency: 'Medium' as const,
       managerAction: '',
       feedback: '',
       potentialSavings: '$3,200',
@@ -71,7 +71,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
       currentInventory: 32,
       predictedSales: 15,
       recommendedAction: 'Relocate to Store #1235',
-      urgency: 'Medium',
+      urgency: 'Medium' as const,
       managerAction: '',
       feedback: '',
       potentialSavings: '$2,100',
@@ -84,7 +84,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
       currentInventory: 67,
       predictedSales: 25,
       recommendedAction: 'Bundle with Phone Cases',
-      urgency: 'Medium',
+      urgency: 'Medium' as const,
       managerAction: '',
       feedback: '',
       potentialSavings: '$4,800',
@@ -97,7 +97,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
       currentInventory: 89,
       predictedSales: 22,
       recommendedAction: 'Create Coffee Bundle Set',
-      urgency: 'Low',
+      urgency: 'Low' as const,
       managerAction: '',
       feedback: '',
       potentialSavings: '$1,900',
@@ -110,7 +110,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
       currentInventory: 23,
       predictedSales: 6,
       recommendedAction: 'Offload to Local Business',
-      urgency: 'Low',
+      urgency: 'Low' as const,
       managerAction: '',
       feedback: '',
       potentialSavings: '$1,200',
@@ -123,13 +123,13 @@ const Recommendations: React.FC<RecommendationsProps> = ({ isDarkMode }) => {
       currentInventory: 234,
       predictedSales: 78,
       recommendedAction: 'Summer Promotion Bundle',
-      urgency: 'High',
+      urgency: 'High' as const,
       managerAction: '',
       feedback: '',
       potentialSavings: '$5,600',
       confidence: 92
     }
-  ];
+  ]);
 
   const categories = ['All', 'Electronics', 'Clothing', 'Food', 'Home & Garden', 'Sports & Outdoors'];
   const urgencyLevels = ['All', 'High', 'Medium', 'Low'];
