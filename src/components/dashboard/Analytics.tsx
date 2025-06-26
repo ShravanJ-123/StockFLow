@@ -584,7 +584,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ isDarkMode }) => {
           <div className="flex items-center space-x-2">
             <div className="w-6 h-6 bg-gray-500 rounded-lg shadow-sm"></div>
             <span className={`text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              Critical (<40%)
+              Critical {'(<40%)'}
             </span>
           </div>
         </div>
@@ -594,4 +594,3 @@ const Analytics: React.FC<AnalyticsProps> = ({ isDarkMode }) => {
 };
 
 export default Analytics;
-{"code":"rate-limited","message":"You have hit the rate limit. Please <a class=\"__boltUpgradePlan__\">Upgrade</a> to keep chatting, or you can continue coding for free in the editor.","providerLimitHit":false,"isRetryable":true}
