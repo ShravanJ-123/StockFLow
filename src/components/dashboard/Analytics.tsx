@@ -416,9 +416,13 @@ const Analytics: React.FC<AnalyticsProps> = ({ isDarkMode }) => {
             <TrendingUp className="w-5 h-5 text-green-600" />
             <span>Top 10 Bestselling Products</span>
           </h3>
-          <div className="h-96">
+          <div className="h-[500px]">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={filteredBestselling} layout="horizontal" margin={{ left: 120 }}>
+              <BarChart 
+                data={filteredBestselling} 
+                layout="horizontal" 
+                margin={{ top: 20, right: 30, left: 150, bottom: 20 }}
+              >
                 <CartesianGrid strokeDasharray="3 3" stroke={isDarkMode ? '#374151' : '#E5E7EB'} />
                 <XAxis 
                   type="number" 
@@ -429,8 +433,9 @@ const Analytics: React.FC<AnalyticsProps> = ({ isDarkMode }) => {
                   type="category" 
                   dataKey="name" 
                   stroke={isDarkMode ? '#9CA3AF' : '#6B7280'}
-                  fontSize={10}
-                  width={120}
+                  fontSize={11}
+                  width={140}
+                  tick={{ textAnchor: 'end' }}
                 />
                 <Tooltip 
                   contentStyle={{
@@ -468,9 +473,13 @@ const Analytics: React.FC<AnalyticsProps> = ({ isDarkMode }) => {
             <TrendingDown className="w-5 h-5 text-red-600" />
             <span>Top 10 Slow-moving Products</span>
           </h3>
-          <div className="h-96">
+          <div className="h-[500px]">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={filteredSlowMoving} layout="horizontal" margin={{ left: 120 }}>
+              <BarChart 
+                data={filteredSlowMoving} 
+                layout="horizontal" 
+                margin={{ top: 20, right: 30, left: 150, bottom: 20 }}
+              >
                 <CartesianGrid strokeDasharray="3 3" stroke={isDarkMode ? '#374151' : '#E5E7EB'} />
                 <XAxis 
                   type="number" 
@@ -481,8 +490,9 @@ const Analytics: React.FC<AnalyticsProps> = ({ isDarkMode }) => {
                   type="category" 
                   dataKey="name" 
                   stroke={isDarkMode ? '#9CA3AF' : '#6B7280'}
-                  fontSize={10}
-                  width={120}
+                  fontSize={11}
+                  width={140}
+                  tick={{ textAnchor: 'end' }}
                 />
                 <Tooltip 
                   contentStyle={{
