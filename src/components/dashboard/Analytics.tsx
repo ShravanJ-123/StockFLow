@@ -57,10 +57,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ isDarkMode }) => {
   const salesTrendData = [
     { month: 'Jan', Electronics: 2400, Clothing: 1800, Food: 3200, 'Home & Kitchen': 1200, Sports: 800 },
     { month: 'Feb', Electronics: 2600, Clothing: 1900, Food: 3400, 'Home & Kitchen': 1300, Sports: 850 },
-    { month: 'Mar', Electronics: 2800, Clothing: 2100, Food: 3600, 'Home & Kitchen': 1400, Sports: 900 },
-    { month: 'Apr', Electronics: 3000, Clothing: 2200, Food: 3800, 'Home & Kitchen': 1500, Sports: 950 },
-    { month: 'May', Electronics: 3200, Clothing: 2400, Food: 4000, 'Home & Kitchen': 1600, Sports: 1000 },
-    { month: 'Jun', Electronics: 3400, Clothing: 2500, Food: 4200, 'Home & Kitchen': 1700, Sports: 1100 },
+    { month: 'Mar', Electronics: 2800, Clothing: 2400, Food: 3600, 'Home & Kitchen': 1400, Sports: 900 },
+    { month: 'Apr', Electronics: 3400, Clothing: 2200, Food: 3800, 'Home & Kitchen': 1500, Sports: 950 },
+    { month: 'May', Electronics: 3200, Clothing: 2100, Food: 4000, 'Home & Kitchen': 1600, Sports: 1000 },
+    { month: 'Jun', Electronics: 3000, Clothing: 2500, Food: 4200, 'Home & Kitchen': 1700, Sports: 1100 },
   ];
 
   // Category Distribution
